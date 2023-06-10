@@ -1,5 +1,8 @@
+//Interessante definir classes ou construtoras com letra maiuscula e sem verbos de ação (como o "cria"), pois usando o new,
+//fica mais compreensível ler como "nova Pessoa" (new Pessoa) [Literalmente, como se fosse um molde]
 class Calculadora{
-    constructor(){
+    constructor(){ //a classe Calculadora possui uma constructor
+        //o this, aqui se refere a variavel que foi instanciada lá em baixo, a "calculadora", nesse caso
         this.display = document.querySelector('.display')
 
         this.inicia = function(){
@@ -57,6 +60,15 @@ class Calculadora{
         this.btnParaDisplay = function(valor){
             this.display.value += valor
         }
+
+        /* Fora isso, tudo normal, como no ultimo projeto, mas aqui, por questão de sintaxe, os metodos
+            são definidos de forma diferente, usando o 
+            this.nomeDoMetedo = function(){
+                lalalala codigos
+            } 
+            *Lembrando que o this se refere sempre a constante que o objeto(ou classe) foi instanciado.
+            Da pra ler como calculadora.metodo()
+            */
 
 
     }
